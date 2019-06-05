@@ -23,4 +23,4 @@ class Model:
     @classmethod
     def load(cls: Type[T], source: Source) -> T:
         """Load a model from a file."""
-        return cls(**source.get_data())
+        return cls(**source.get_data())  # type: ignore

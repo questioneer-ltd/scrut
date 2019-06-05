@@ -10,4 +10,4 @@ class Source(metaclass=ABCMeta):
     @abstractmethod
     def get_data(self) -> Dict[Any, Any]:
         """Get the data contained in this source."""
-        raise NotImplementedError
+        raise NotImplementedError  # pragma: no cover
