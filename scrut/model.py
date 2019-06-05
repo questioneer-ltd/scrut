@@ -1,9 +1,11 @@
 """Validation Model Class."""
 
-from typing import TextIO, Type, TypeVar
+from typing import Type, TypeVar
 
 from pydantic import Extra
 from pydantic.dataclasses import dataclass
+
+from .source import Source
 
 T = TypeVar("T", bound='Model')
 
@@ -19,9 +21,6 @@ class Model:
         validate_assignment = True
 
     @classmethod
-    def load_from_file(cls: Type[T], fp: TextIO) -> T:
+    def load(cls: Type[T], source: Source) -> T:
         """Load a model from a file."""
-
-    @classmethod
-    def load_from_str(cls: Type[T], data: str) -> T:
-        """Load a model from a string."""
+        return cls(**source.get_data())
