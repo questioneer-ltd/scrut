@@ -7,7 +7,7 @@ from pydantic import BaseConfig, Extra
 from .source import Source
 
 if TYPE_CHECKING:
-    from dataclasses import dataclass
+    from dataclasses import dataclass  # pragma: nocover
 else:
     from pydantic.dataclasses import dataclass
 
