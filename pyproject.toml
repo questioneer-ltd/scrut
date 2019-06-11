@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "scrut"
-version = "0.1.0"
+version = "0.2.0"
 description = "A strictly typed validator."
 authors = ["Questioneer Limited <hello@questioneer.co.uk>"]
 repository = "https://github.com/questioneer-ltd/scrut"
